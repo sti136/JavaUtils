@@ -1,10 +1,11 @@
 package FileUtils;
 
 import java.io.File;
+import java.util.LinkedList;
 
 public interface FileUtils {
 	
-    boolean read(File file);
+    LinkedList<String> read(File file);
     boolean write(File file, String writtenStr);
     
 }
