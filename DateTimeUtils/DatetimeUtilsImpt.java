@@ -18,11 +18,11 @@ public class DatetimeUtilsImpt implements DateTimeUtils{
 					      else if(ldt instanceof LocalTime)
 					    	  return ((LocalTime)ldt).format(dtf);
 					      else
-					    	  return "";
+					    	  return null;
 				 }catch(DateTimeException ex) {
-					 return "";
+					 return null;
 				 }catch(Exception ex) {
-					 return "";
+					 return null;
 				 }
 			    	  
 		}
