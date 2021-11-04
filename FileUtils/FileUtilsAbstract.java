@@ -11,7 +11,7 @@ import java.io.OutputStreamWriter;
 import java.nio.charset.Charset;
 import java.util.LinkedList;
 
-public abstract class FileUtilsImpt implements FileUtils {
+public abstract class FileUtilsAbstract implements FileUtils {
 	public static final Charset utf8 = Charset.forName("UTF-8");
 	public abstract LinkedList<String> filterRead(LinkedList<String> rawList);
     public LinkedList<String> read(File file) {
