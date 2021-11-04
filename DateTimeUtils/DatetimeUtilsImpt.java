@@ -11,14 +11,14 @@ import java.time.format.DateTimeParseException;
 public class DatetimeUtilsImpt implements DateTimeUtils{
 		public String convertLocalDateTimeToString(Object ldt,DateTimeFormatter dtf) {
 				 try {
-			      if(ldt instanceof LocalDateTime)
-			    	  return ((LocalDateTime) ldt).format(dtf);
-			      else if(ldt instanceof LocalDate)
-			    	  return ((LocalDate) ldt).format(dtf);
-			      else if(ldt instanceof LocalTime)
-			    	  return ((LocalTime)ldt).format(dtf);
-			      else
-			    	  return "";
+					      if(ldt instanceof LocalDateTime)
+					    	  return ((LocalDateTime) ldt).format(dtf);
+					      else if(ldt instanceof LocalDate)
+					    	  return ((LocalDate) ldt).format(dtf);
+					      else if(ldt instanceof LocalTime)
+					    	  return ((LocalTime)ldt).format(dtf);
+					      else
+					    	  return "";
 				 }catch(DateTimeException ex) {
 					 return "";
 				 }catch(Exception ex) {
@@ -28,13 +28,13 @@ public class DatetimeUtilsImpt implements DateTimeUtils{
 		}
 		public Object convertStringToLocalDateTime(String dateTimeStr, DateTimeFormatter dtf,DateTimeType type) throws DateTimeParseException{
 			try {
-				switch(type) {
-				case LocalDateTime:
-					return LocalDateTime.parse(dateTimeStr,dtf);
-				case LocalTime:
-					return LocalTime.parse(dateTimeStr,dtf);
-				case LocalDate:
-					return LocalDate.parse(dateTimeStr,dtf);
+						switch(type) {
+						case LocalDateTime:
+							return LocalDateTime.parse(dateTimeStr,dtf);
+						case LocalTime:
+							return LocalTime.parse(dateTimeStr,dtf);
+						case LocalDate:
+							return LocalDate.parse(dateTimeStr,dtf);
 				
 				}
 			}catch(Exception ex) {

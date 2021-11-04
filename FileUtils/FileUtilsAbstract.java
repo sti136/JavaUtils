@@ -36,8 +36,8 @@ public abstract class FileUtilsAbstract implements FileUtils {
     }
     public boolean write(File file, String writtenStr) {
     	try(FileOutputStream fos = new FileOutputStream(file);OutputStreamWriter osw = new OutputStreamWriter(fos)){
-    		osw.write(writtenStr);
-    		return true;
+	    		osw.write(writtenStr);
+	    		return true;
     	} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
